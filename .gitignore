@@ -1,0 +1,30 @@
+# dependencies
+node_modules
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# build
+dist
+*.tsbuildinfo
+
+# env e segredos (nunca versionar)
+.env
+.env.*
+.figma-token
+
+# editor / sistema
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.log
+
+# cópia local da cinova-portal usada só como referência de arquitetura (repositório git próprio, não faz parte deste projeto)
+/cinova-portal
+
+# snapshot local do design (JSON/PNG da API do Figma): regenerável com o token, não versionar
+/design
