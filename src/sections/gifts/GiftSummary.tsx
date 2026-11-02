@@ -24,7 +24,7 @@ interface GiftSummaryProps {
 
 export default function GiftSummary({ gift, variant }: GiftSummaryProps) {
   const intl = useIntl();
-  const name = intl.formatMessage({ id: `landing.gifts.items.${gift.id}` });
+  const { name } = gift;
   const price = intl.formatNumber(gift.price, { style: 'currency', currency: 'BRL' });
   const viewOnSite = (
     <Button variant="outlined" fullWidth href={gift.url} target="_blank" rel="noopener noreferrer">

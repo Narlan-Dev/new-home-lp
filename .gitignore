@@ -15,6 +15,7 @@ dist
 # env e segredos (nunca versionar)
 .env
 .env.*
+!.env.emulator
 .figma-token
 
 # editor / sistema
@@ -28,3 +29,15 @@ dist
 
 # snapshot local do design (JSON/PNG da API do Figma): regenerável com o token, não versionar
 /design
+
+# cópias de segurança do banco (yarn firebase:backup): dados do casal, ficam só na máquina
+/backups
+
+# credenciais do Firebase (chave de conta de serviço do Admin SDK): nunca versionar nem importar em src/
+*firebase-adminsdk*.json
+serviceAccount*.json
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log

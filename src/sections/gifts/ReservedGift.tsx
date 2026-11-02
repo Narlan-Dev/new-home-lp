@@ -29,7 +29,7 @@ interface ReservedGiftProps {
 
 export default function ReservedGift({ gift, guestName, titleId, onClose }: ReservedGiftProps) {
   const intl = useIntl();
-  const name = intl.formatMessage({ id: `landing.gifts.items.${gift.id}` });
+  const { name } = gift;
 
   return (
     <Stack

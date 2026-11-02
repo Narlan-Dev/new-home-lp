@@ -81,6 +81,26 @@ export const PinIcon = createIcon(32, 2, [
 
 export const PlusIcon = createIcon(22, 1.375, ['M11.0002 4.58334V11M11.0002 11V17.4167M11.0002 11H4.5835M11.0002 11H17.4168']);
 
+// ícones da área do casal (traço de 24px, estilo Feather): não vêm do design da landing
+export const EditIcon = createIcon(24, 1.75, ['M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z']);
+
+export const ExternalLinkIcon = createIcon(24, 1.75, [
+  'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6',
+  'M15 3h6v6',
+  'M10 14L21 3'
+]);
+
+export const LogoutIcon = createIcon(24, 1.75, ['M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4', 'M16 17l5-5-5-5', 'M21 12H9']);
+
+export const SearchIcon = createIcon(24, 1.75, ['M11 3a8 8 0 1 0 0 16 8 8 0 0 0 0-16z', 'M21 21l-4.35-4.35']);
+
+export const TrashIcon = createIcon(24, 1.75, [
+  'M3 6h18',
+  'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2',
+  'M10 11v6',
+  'M14 11v6'
+]);
+
 export const QrIcon = createIcon(104, 6.5, [
   'M17.3333 13H39C41.3932 13 43.3333 14.9401 43.3333 17.3333V39C43.3333 41.3932 41.3932 43.3333 39 43.3333H17.3333C14.9401 43.3333 13 41.3932 13 39V17.3333C13 14.9401 14.9401 13 17.3333 13Z',
   'M65 13H86.6667C89.0599 13 91 14.9401 91 17.3333V39C91 41.3932 89.0599 43.3333 86.6667 43.3333H65C62.6068 43.3333 60.6667 41.3932 60.6667 39V17.3333C60.6667 14.9401 62.6068 13 65 13Z',

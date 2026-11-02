@@ -4,6 +4,7 @@ import { createBrowserRouter } from 'react-router';
 // project-imports
 import Loadable from 'components/Loadable';
 import SimpleLayout from 'layout/Simple';
+import AdminRoutes from './AdminRoutes';
 
 // render - pages
 const PagesLanding = Loadable(lazy(() => import('pages/landing')));
@@ -26,7 +27,8 @@ const router = createBrowserRouter(
           element: <MaintenanceError404 />
         }
       ]
-    }
+    },
+    AdminRoutes
   ],
   { basename: import.meta.env.VITE_APP_BASE_NAME }
 );

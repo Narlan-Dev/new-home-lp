@@ -1,5 +1,12 @@
 export const ROUTES = {
-  HOME: '/'
+  HOME: '/',
+  ADMIN: {
+    ROOT: '/admin',
+    LOGIN: '/admin/login',
+    GIFTS: '/admin/gifts',
+    GIFT_NEW: '/admin/gifts/new',
+    giftEdit: (id: string) => `/admin/gifts/${id}`
+  }
 } as const;
 
 // âncoras das seções da landing (usadas no menu e nos botões)

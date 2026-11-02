@@ -153,9 +153,9 @@ export default function Hero() {
             {COUPLE.first}
           </Box>{' '}
           <Box component="span" sx={{ display: 'block', ...entrance(500) }}>
-            <Box component="span" sx={{ mr: '0.12em', fontStyle: 'italic', fontWeight: 400 }}>
+            <Box component="span" sx={{ fontStyle: 'italic', fontWeight: 400 }}>
               &amp;
-            </Box>
+            </Box>{' '}
             {COUPLE.second}
           </Box>
         </Typography>

@@ -14,7 +14,7 @@ import { useIntl } from 'react-intl';
 // project-imports
 import FormField from 'components/@extended/FormField';
 import SafeFormattedMessage from 'components/@extended/SafeFormattedMessage';
-import { reserveGift } from 'framework/rest/gifts';
+import { reserveGift } from 'framework/rest/reservations';
 import { emptyReserveGiftValues, firstName, formatWhatsapp, ReserveGiftField, validateReserveGift } from './ReserveGiftForm.schema';
 import colors from 'themes/theme/default';
 

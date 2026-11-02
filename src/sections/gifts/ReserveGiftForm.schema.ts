@@ -40,5 +40,8 @@ export function validateReserveGift(values: ReserveGiftValues): ReserveGiftError
   return errors;
 }
 
-/** primeiro nome, usado na mensagem de agradecimento */
-export const firstName = (fullName: string) => fullName.trim().split(/\s+/)[0] ?? '';
+/** primeiro nome com a inicial maiúscula ("maria souza" -> "Maria"), usado na mensagem de agradecimento */
+export const firstName = (fullName: string) => {
+  const first = fullName.trim().split(/\s+/)[0] ?? '';
+  return first.charAt(0).toLocaleUpperCase('pt-BR') + first.slice(1);
+};

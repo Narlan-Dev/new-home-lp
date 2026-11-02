@@ -5,15 +5,23 @@
   "description": "Landing page implementada a partir do design do Figma (arquivo kZXVLomBUH1YbLtjfu9eJi).",
   "scripts": {
     "start": "vite",
+    "start:emulator": "vite --mode emulator",
     "build": "yarn typecheck && vite build",
     "preview": "vite preview",
     "typecheck": "tsc && tsc -p tsconfig.node.json",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
-    "prettier": "prettier --write \"src/**/*.{ts,tsx}\""
+    "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "emulators": "firebase emulators:start --only database,auth --project demo-cha-casa-nova",
+    "test:rules": "firebase emulators:exec --only database --project demo-cha-casa-nova \"node --test tests/rules/*.test.mjs\"",
+    "rules:deploy": "firebase deploy --only database --project arnexs",
+    "sandbox": "firebase emulators:exec --only database,auth --project demo-cha-casa-nova \"node scripts/firebase/sandbox-reset.mjs && vite --mode emulator\"",
+    "firebase:backup": "node scripts/firebase/backup.mjs",
+    "firebase:seed": "node scripts/firebase/seed-gifts.mjs",
+    "firebase:set-admin": "node scripts/firebase/set-admin.mjs"
   },
   "engines": {
-    "node": ">=22.22.0"
+    "node": ">=24.12.0"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -21,14 +29,19 @@
     "@fontsource/cormorant-garamond": "5.3.0",
     "@fontsource/dm-sans": "5.3.0",
     "@mui/material": "9.5.0",
+    "@tanstack/react-query": "5.105.1",
+    "firebase": "13.1.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "react-intl": "12.1.6",
-    "react-router": "8.5.1"
+    "react-router": "8.5.1",
+    "sonner": "2.0.8"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/node": "22.20.5",
+    "@firebase/rules-unit-testing": "6.0.0",
+    "@tanstack/react-query-devtools": "5.105.1",
+    "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "6.1.2",
@@ -36,6 +49,8 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.7",
     "eslint-plugin-react-hooks": "7.1.1",
+    "firebase-admin": "14.5.0",
+    "firebase-tools": "14.27.0",
     "globals": "17.14.0",
     "prettier": "3.9.10",
     "typescript": "6.0.3",
